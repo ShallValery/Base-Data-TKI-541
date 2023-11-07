@@ -11,7 +11,6 @@ class Doctor(Base):
     gender = Column(String)
     specialization_id = Column(Integer, ForeignKey('specializations.id'))
 
-    patients = relationship('Patient', back_populates='doctor')
     schedules = relationship('Schedule', back_populates='doctor')
     specialization = relationship('Specialization', back_populates='doctors')
 

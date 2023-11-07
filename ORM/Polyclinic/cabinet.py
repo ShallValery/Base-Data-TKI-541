@@ -8,3 +8,6 @@ class Cabinet(Base):
     id = Column(Integer, primary_key=True, index=True)
 
     schedules = relationship('Schedule', back_populates='cabinet')
+
+    def __init__(self, id):
+        self.id = id
